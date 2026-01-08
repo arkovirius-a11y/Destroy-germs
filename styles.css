@@ -396,3 +396,40 @@ input:focus, textarea:focus{border-color:rgba(157,227,255,.45)}
 @media (max-width: 680px){
   .contact-qr .qr-item img{max-width: 320px;}
 }
+/* Жёстко нормализуем таблицу испытаний, чтобы rowspan не "съезжал" */
+.data-table--tests{
+  width: 100%;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+}
+
+.data-table--tests thead,
+.data-table--tests tbody{
+  display: table-header-group !important;
+  width: auto !important;
+}
+
+.data-table--tests tr{
+  display: table-row !important;
+}
+
+.data-table--tests th,
+.data-table--tests td{
+  display: table-cell !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 10px;
+  border: 1px solid rgba(255,255,255,.14);
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* длинная объединённая ячейка "до обработки" */
+.data-table--tests td[rowspan="8"]{
+  font-weight: 600;
+}
+
+/* прокрутка на телефоне */
+.table-wrap{
+  overflow-x: auto;
+}
