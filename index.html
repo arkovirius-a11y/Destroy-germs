@@ -9,14 +9,16 @@
 </head>
 <body>
   <a class="skip-link" href="#content">Перейти к содержанию</a>
-<header class="header">
-  <div class="support-banner">
-    <div class="container support-banner__inner">
-      <a href="https://fasie.ru/" target="_blank" rel="noopener" aria-label="Фонд содействия инновациям">
-        <img src="assets/fasie-logo.jpg" alt="Фонд содействия инновациям" />
-      </a>
+
+  <header class="header">
+    <div class="support-banner">
+      <div class="container support-banner__inner">
+        <a href="https://fasie.ru/" target="_blank" rel="noopener" aria-label="Фонд содействия инновациям">
+          <img src="assets/fasie-logo.jpg" alt="Фонд содействия инновациям" />
+        </a>
+      </div>
     </div>
-  </div>
+
     <div class="container header__row">
       <div class="brand">
         <div class="brand__mark" aria-hidden="true">ПСС</div>
@@ -30,7 +32,8 @@
         <a href="#product">Продукт</a>
         <a href="#tech">Технология</a>
         <a href="#use">Применение</a>
-          <a href="#gallery">Фото</a>
+        <a href="#gallery">Фото</a>
+        <a href="#tests">Испытания</a>
         <a href="#service">Сервис</a>
         <a href="#company">Компания</a>
         <a class="btn btn--small" href="#contact">Запрос КП</a>
@@ -82,6 +85,8 @@
         <a href="#product">Продукт</a>
         <a href="#tech">Технология</a>
         <a href="#use">Применение</a>
+        <a href="#gallery">Фото</a>
+        <a href="#tests">Испытания</a>
         <a href="#service">Сервис</a>
         <a href="#company">Компания</a>
         <a href="#contact">Контакты</a>
@@ -102,7 +107,7 @@
           <article class="card">
             <h3>Технические характеристики (типовые)</h3>
             <ul class="list">
-              <li>Тип стерилизации: озонирование + низкотемпературная плазма (модуль). </li>
+              <li>Тип стерилизации: озонирование + низкотемпературная плазма (модуль).</li>
               <li>Температурный режим: 20–60°C.</li>
               <li>Габариты: линейка моделей (компактные / средние / крупногабаритные / проходные).</li>
             </ul>
@@ -206,48 +211,164 @@
       </div>
     </section>
 
-<section class="section" id="gallery">
-  <div class="container">
-    <h2>Фото оборудования</h2>
-    <p class="muted">
-      Ниже приведены изображения прототипа камеры стерилизации и узлов системы. Материалы предназначены для демонстрации компоновки и текущего уровня готовности изделия.
-    </p>
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2>Фото оборудования</h2>
+        <p class="muted">
+          Ниже приведены изображения прототипа камеры стерилизации и узлов системы. Материалы предназначены для демонстрации компоновки и текущего уровня готовности изделия.
+        </p>
 
-    <div class="gallery-grid">
-      <figure class="photo-card">
-        <img src="assets/chamber-closed.jpg" alt="Камера стерилизации: внешний вид (закрытая дверца)" loading="lazy" />
-        <figcaption>
-          <b>Камера стерилизации — внешний вид.</b><br/>
-          Компактное исполнение для лабораторий и малых производственных участков.
-        </figcaption>
-      </figure>
+        <div class="gallery-grid">
+          <figure class="photo-card">
+            <img src="assets/chamber-closed.jpg" alt="Камера стерилизации: внешний вид (закрытая дверца)" loading="lazy" />
+            <figcaption>
+              <b>Камера стерилизации — внешний вид.</b><br/>
+              Компактное исполнение для лабораторий и малых производственных участков.
+            </figcaption>
+          </figure>
 
-      <figure class="photo-card">
-        <img src="assets/chamber-open.jpg" alt="Камера стерилизации и модуль генерации: вид с открытой дверцей" loading="lazy" />
-        <figcaption>
-          <b>Рабочий объём и модуль генерации.</b><br/>
-          Демонстрация внутреннего объёма камеры и размещения силового/газового блока.
-        </figcaption>
-      </figure>
+          <figure class="photo-card">
+            <img src="assets/chamber-open.jpg" alt="Камера стерилизации и модуль генерации: вид с открытой дверцей" loading="lazy" />
+            <figcaption>
+              <b>Рабочий объём и модуль генерации.</b><br/>
+              Демонстрация внутреннего объёма камеры и размещения силового/газового блока.
+            </figcaption>
+          </figure>
 
-      <figure class="photo-card">
-        <img src="assets/module-inside.jpg" alt="Внутреннее устройство модуля генерации и коммуникаций" loading="lazy" />
-        <figcaption>
-          <b>Внутреннее устройство модуля.</b><br/>
-          Узлы генерации и подготовки газовой среды, силовая часть и коммуникации: высоковольтный блок питания, генератор низкотемпературной навесной плазмы барьерного разряда, модуль осушителя, деструктор озона, компрессор, вакуумный насос, вентилятор охлаждения; разъём питания С-13 и кнопка включения/выключения.
-        </figcaption>
-      </figure>
+          <figure class="photo-card">
+            <img src="assets/module-inside.jpg" alt="Внутреннее устройство модуля генерации и коммуникаций" loading="lazy" />
+            <figcaption>
+              <b>Внутреннее устройство модуля.</b><br/>
+              Узлы генерации и подготовки газовой среды, силовая часть и коммуникации: высоковольтный блок питания,
+              генератор низкотемпературной навесной плазмы барьерного разряда, модуль осушителя, деструктор озона,
+              компрессор, вакуумный насос, вентилятор охлаждения; разъём питания C-13 и кнопка включения/выключения.
+            </figcaption>
+          </figure>
 
-      <figure class="photo-card">
-        <img src="assets/cabinet.png" alt="Испытательный образец камеры стерилизации (напольное исполнение)" loading="lazy" />
-        <figcaption>
-          <b>Напольное исполнение камеры.</b><br/>
-          Прототип в варианте напольного размещения для расширенного объёма обработки и удобства эксплуатации.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+          <figure class="photo-card">
+            <img src="assets/cabinet.png" alt="Испытательный образец камеры стерилизации (напольное исполнение)" loading="lazy" />
+            <figcaption>
+              <b>Напольное исполнение камеры.</b><br/>
+              Прототип в варианте напольного размещения для расширенного объёма обработки и удобства эксплуатации.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Испытания и результаты (таблица как в примере) -->
+    <section class="section" id="tests">
+      <div class="container">
+        <h2>Испытания и результаты</h2>
+        <p class="muted">
+          Процент инактивации бактерий <i>Bacillus subtilis</i> в зависимости от концентрации озона и времени экспозиции.
+        </p>
+
+        <div class="card">
+          <div class="table-wrap" role="region" aria-label="Таблица результатов испытаний" tabindex="0">
+           <table class="data-table data-table--tests">
+  <colgroup>
+    <col style="width: 60px;">
+    <col style="width: 160px;">
+    <col style="width: 150px;">
+    <col style="width: 260px;">
+    <col style="width: 260px;">
+    <col style="width: 120px;">
+    <col style="width: 160px;">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th rowspan="2">№</th>
+      <th>Концентрация озона</th>
+      <th>Время экспозиции</th>
+      <th>Кол-во бактерий до обработки (ОМЧ)</th>
+      <th>Кол-во бактерий после обработки (ОМЧ)</th>
+      <th>Кратность</th>
+      <th>Процент инактивации бактерий</th>
+    </tr>
+    <tr>
+      <th>мг/м³</th>
+      <th>мин</th>
+      <th>КОЕ/г</th>
+      <th>КОЕ/г ×10⁵</th>
+      <th>о.е.</th>
+      <th>%</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td rowspan="4">285</td>
+      <td>1,0</td>
+      <td rowspan="8">3,56 × 10⁵<br/>B.s на 3/4 чашки</td>
+      <td>1,43</td>
+      <td>2,49</td>
+      <td><strong>60</strong></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1,5</td>
+      <td>1,61</td>
+      <td>2,27</td>
+      <td><strong>55</strong></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3,0</td>
+      <td>0,63</td>
+      <td>5,65</td>
+      <td><strong>82</strong></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>3,0</td>
+      <td>0,51</td>
+      <td>6,98</td>
+      <td><strong>86</strong></td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td rowspan="4">570</td>
+      <td>0,5</td>
+      <td>0,51</td>
+      <td>6,98</td>
+      <td><strong>86</strong></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>1,0</td>
+      <td>0,49</td>
+      <td>7,27</td>
+      <td><strong>85</strong></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>1,5</td>
+      <td>0,37</td>
+      <td>9,62</td>
+      <td><strong>90</strong></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>3,0</td>
+      <td>0,27</td>
+      <td>13,19</td>
+      <td><strong>92</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+          </div>
+
+          <p class="muted small" style="margin-top:10px;">
+            Примечание: исходная нагрузка до обработки одинакова для серий измерений (3,56 × 10⁵; B.s на 3/4 чашки).
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section id="service" class="section section--alt">
       <div class="container">
@@ -278,7 +399,7 @@
             <h3>Юридическая информация</h3>
             <dl class="dl">
               <div><dt>Наименование</dt><dd>ООО «Проектирование систем стерилизации» (ООО «ПСС»)</dd></div>
-              <div><dt>ОГРН</dt><dd>1245400036860</dd></div>
+              <div><dt>еги</dt><dd>1245400036860</dd></div>
               <div><dt>Дата регистрации</dt><dd>15.10.2024</dd></div>
               <div><dt>Адрес</dt><dd>630090, Новосибирская область, г. Новосибирск, ул. Николаева, д. 12</dd></div>
             </dl>
@@ -298,18 +419,18 @@
     </section>
 
     <section id="contact" class="section section--alt">
-  <div class="container">
-    <h2>Контакты</h2>
+      <div class="container">
+        <h2>Контакты</h2>
 
-    <div class="grid grid--1">
-      <div class="card">
-        <h3>Контакты</h3>
-        <ul class="list">
-          <li><strong>Email:</strong> <a href="mailto:kondratjevarcadi@yandex.ru">kondratjevarcadi@yandex.ru</a></li>
-          <li><strong>Город:</strong> Новосибирск</li>
-        </ul>
+        <div class="grid grid--1">
+          <div class="card">
+            <h3>Контакты</h3>
+            <ul class="list">
+              <li><strong>Email:</strong> <a href="mailto:kondratjevarcadi@yandex.ru">kondratjevarcadi@yandex.ru</a></li>
+              <li><strong>Город:</strong> Новосибирск</li>
+            </ul>
 
-        <p class="support">
+            <p class="support">
               <strong>Поддержка проекта.</strong>
               Проект реализуется при поддержке гранта Фонда содействия инновациям, предоставленного в рамках программы
               «Студенческий стартап» федерального проекта «Платформа университетского технологического предпринимательства».
@@ -319,24 +440,24 @@
                 <a href="https://univertechpred.ru/" target="_blank" rel="noopener">Федеральный проект</a>
               </span>
             </p>
-      
 
-        <div class="contact-qr" aria-label="QR-коды">
-          <div class="qr-pair">
-            <div class="qr-item">
-              <img src="assets/qr-old.png" alt="QR‑код 1" loading="lazy" />
-              <div class="muted small"><strong>Телеграмм.</strong> </div>
+            <div class="contact-qr" aria-label="QR-коды">
+              <div class="qr-pair">
+                <div class="qr-item">
+                  <img src="assets/qr-old.png" alt="QR-код 1" loading="lazy" />
+                  <div class="muted small"><strong>Telegram.</strong></div>
+                </div>
+                <div class="qr-item">
+                  <img src="assets/qr-new.png" alt="QR-код 2" loading="lazy" />
+                  <div class="muted small"><strong>Почта (основной канал связи).</strong></div>
+                </div>
+              </div>
             </div>
-            <div class="qr-item">
-              <img src="assets/qr-new.png" alt="QR‑код 2" loading="lazy" />
-              <div class="muted small"><strong>Почта (основной канал связи).</strong> </div>
-            </div>
+
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   </main>
 
   <footer class="footer">
