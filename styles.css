@@ -1,0 +1,398 @@
+/* Минималистичный одностраничный сайт (адаптивный) */
+:root{
+  --bg:#0b0f17;
+  --panel:#121a27;
+  --panel2:#0f1622;
+  --text:#e7eefc;
+  --muted:#b9c6dd;
+  --line:rgba(231,238,252,.14);
+  --accent:#7aa7ff;
+  --accent2:#9de3ff;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius:16px;
+  --max:1120px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background: radial-gradient(1200px 700px at 20% 0%, rgba(122,167,255,.18), transparent 55%),
+              radial-gradient(900px 500px at 100% 10%, rgba(157,227,255,.14), transparent 60%),
+              var(--bg);
+  color:var(--text);
+}
+
+a{color:inherit; text-decoration:none}
+a:hover{color:var(--accent2)}
+.container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+.skip-link{
+  position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{left:18px; top:18px; width:auto; height:auto; background:#000; padding:10px 12px; border-radius:10px; z-index:1000}
+
+.header{
+  border-bottom:1px solid var(--line);
+  background: linear-gradient(180deg, rgba(18,26,39,.85), rgba(18,26,39,.35));
+  backdrop-filter: blur(10px);
+}
+
+.header__row{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px; padding:14px 0;
+}
+
+.brand{display:flex; align-items:center; gap:12px; min-width:260px}
+.brand__mark{
+  width:44px; height:44px; border-radius:14px;
+  display:grid; place-items:center;
+  background: linear-gradient(135deg, rgba(122,167,255,.25), rgba(157,227,255,.18));
+  border:1px solid var(--line);
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.brand__name{font-weight:700}
+.brand__sub{color:var(--muted); font-size:12.5px; margin-top:2px}
+
+.nav{display:flex; gap:14px; align-items:center}
+.nav a{color:var(--muted); font-size:14px}
+.nav a:hover{color:var(--text)}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 16px; border-radius:999px;
+  background: linear-gradient(135deg, rgba(122,167,255,.95), rgba(157,227,255,.85));
+  color:#07101c;
+  font-weight:700;
+  border:0;
+  box-shadow: var(--shadow);
+  cursor:pointer;
+}
+.btn--ghost{
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  box-shadow:none;
+}
+.btn--ghost:hover{border-color:rgba(231,238,252,.3)}
+.btn--small{padding:10px 12px; font-size:14px}
+
+.burger{
+  display:none;
+  width:44px; height:44px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(18,26,39,.6);
+  cursor:pointer;
+}
+.burger span{
+  display:block; width:18px; height:2px; margin:4px auto;
+  background:var(--text); border-radius:2px;
+}
+
+.hero{
+  padding:28px 0 36px;
+  display:grid; grid-template-columns: 1.25fr .85fr;
+  gap:18px;
+}
+.hero h1{margin:0 0 10px; font-size:34px; line-height:1.15}
+.hero p{color:var(--muted); margin:0 0 14px; line-height:1.6}
+.hero__cta{display:flex; gap:12px; flex-wrap:wrap; margin:10px 0 0}
+.note{color:rgba(231,238,252,.72); font-size:12.5px}
+
+.hero__card{
+  border:1px solid var(--line);
+  background: rgba(18,26,39,.55);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow);
+  display:grid; gap:12px;
+  align-content:start;
+}
+.kpi{padding:12px; border:1px solid var(--line); border-radius:14px; background:rgba(15,22,34,.6)}
+.kpi__num{font-weight:800; font-size:18px}
+.kpi__label{color:var(--muted); font-size:13px; margin-top:3px}
+
+.section{padding:56px 0}
+.section--alt{background: linear-gradient(180deg, transparent, rgba(255,255,255,.03), transparent)}
+.section h2{margin:0 0 12px; font-size:26px}
+.lead{color:var(--muted); line-height:1.65; margin:0 0 18px}
+
+.grid{display:grid; gap:14px}
+.grid--2{grid-template-columns: repeat(2, minmax(0,1fr))}
+.grid--1{grid-template-columns: 1fr}
+.grid--3{grid-template-columns: repeat(3, minmax(0,1fr))}
+.grid--4{grid-template-columns: repeat(4, minmax(0,1fr))}
+
+.card{
+  border:1px solid var(--line);
+  background: rgba(18,26,39,.55);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow);
+}
+.card h3{margin:0 0 10px; font-size:18px}
+.card p{margin:0; color:var(--muted); line-height:1.6}
+
+.list{margin:0; padding-left:18px; color:var(--muted); line-height:1.65}
+.list li{margin:6px 0}
+.callout{
+  margin-top:14px;
+  border:1px solid rgba(157,227,255,.28);
+  background: rgba(157,227,255,.06);
+  border-radius: var(--radius);
+  padding:14px 16px;
+}
+.callout__title{font-weight:800; margin-bottom:6px}
+.callout__text{color:var(--muted); line-height:1.6}
+
+.pill{
+  padding:12px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(15,22,34,.6);
+  color:var(--muted);
+  text-align:center;
+}
+.mt{margin-top:14px}
+
+.dl{margin:0}
+.dl div{display:grid; grid-template-columns: 170px 1fr; gap:12px; padding:10px 0; border-bottom:1px dashed rgba(231,238,252,.14)}
+.dl dt{color:rgba(231,238,252,.78)}
+.dl dd{margin:0; color:var(--muted)}
+
+.form label{display:block; margin:10px 0 0; color:rgba(231,238,252,.86); font-size:13px}
+input, textarea{
+  width:100%;
+  margin-top:6px;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(11,15,23,.55);
+  color:var(--text);
+  outline:none;
+}
+input:focus, textarea:focus{border-color:rgba(157,227,255,.45)}
+.form .btn{margin-top:12px}
+
+.logos{display:flex; gap:10px; margin:12px 0}
+.logos img{
+  /* Увеличенный размер логотипов в блоке контактов */
+  height:clamp(42px, 4vw, 72px);
+  width:auto;
+  opacity:.92;
+  border:1px solid rgba(231,238,252,.14);
+  border-radius:10px;
+  padding:8px 10px;
+  background: rgba(15,22,34,.6);
+}
+
+.support{
+  margin:12px 0 0;
+  color:rgba(231,238,252,.82);
+  line-height:1.6;
+  font-size:13px;
+}
+.support__links a{color:var(--accent2); text-decoration:underline; text-underline-offset:3px}
+.support__links a:hover{color:var(--text)}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:20px 0;
+  background: rgba(18,26,39,.35);
+}
+.footer__row{display:flex; justify-content:space-between; align-items:center; gap:10px}
+.footer__small a{color:var(--muted)}
+.footer__small a:hover{color:var(--text)}
+
+.mobile-nav{
+  border-top:1px solid var(--line);
+  background: rgba(18,26,39,.92);
+}
+.mobile-nav__inner{display:grid; gap:8px; padding:12px 0}
+.mobile-nav a{
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  color:var(--muted);
+  background: rgba(15,22,34,.6);
+}
+
+.toast{
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(157,227,255,.28);
+  background: rgba(157,227,255,.06);
+  color:rgba(231,238,252,.9);
+}
+
+/* Логотипы поддержки по бокам экрана (отображаются только на очень широких экранах) */
+@media (min-width: 1400px){
+  .logos{display:none}
+}
+
+@media (max-width: 980px){
+  .hero{grid-template-columns: 1fr; }
+  .grid--4{grid-template-columns: repeat(2, minmax(0,1fr))}
+  .grid--3{grid-template-columns: 1fr}
+  .grid--2{grid-template-columns: 1fr}
+  .nav{display:none}
+  .burger{display:inline-block}
+  .brand{min-width:0}
+  .dl div{grid-template-columns: 1fr}
+}
+
+
+/* Галерея */
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:16px;
+  margin-top:16px;
+}
+.photo-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding:14px;
+  box-shadow: var(--shadow);
+}
+.photo-card img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid var(--line);
+  background:#fff;
+}
+.photo-card figcaption{
+  margin-top:10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.photo-card figcaption b{ color: var(--text); }
+.photo-card--logo img{
+  max-width: 520px;
+  margin: 0 auto;
+}
+@media (max-width: 900px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+}
+
+
+/* QR-блок в контактах */
+.qr-block{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin-top:14px;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(18,26,39,.55);
+}
+.qr-block__img img{
+  width:150px;
+  height:auto;
+  display:block;
+  border-radius: 12px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.qr-block__text{
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.qr-block__text strong{ color: var(--text); }
+@media (max-width: 520px){
+  .qr-block{flex-direction:column; align-items:flex-start;}
+  .qr-block__img img{ width: 220px; }
+}
+
+
+/* Верхняя "шапка" с логотипом Фонда содействия инновациям */
+.support-banner{
+  border-bottom: 1px solid var(--line);
+  background: rgba(9,12,18,.55);
+}
+.support-banner__inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:12px 0;
+}
+.support-banner img{
+  height: clamp(70px, 6vw, 110px);
+  width:auto;
+  display:block;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
+  border-radius: 14px;
+  background:#fff;
+  padding:10px 14px;
+}
+
+/* Фото в блоке контактов */
+.contact-photo{margin-top:14px}
+.contact-photo img{
+  width:100%;
+  max-width: 560px;
+  height:auto;
+  display:block;
+  border-radius: 16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.02);
+}
+
+.contact-qr{margin-top:14px; display:flex; flex-direction:column; align-items:flex-start; gap:10px}
+.contact-qr img{
+  width:100%;
+  max-width: 280px;
+  height:auto;
+  display:block;
+  border-radius: 16px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.contact-photo .muted{margin-top:8px}
+
+/* Увеличенный QR вместо формы */
+.qr-card h3{margin-bottom:10px}
+.qr-block--large .qr-block__img img{
+  width: 220px;
+}
+@media (max-width: 680px){
+  .qr-block{flex-direction:column; align-items:flex-start}
+  .qr-block__img img{width: 200px}
+}
+
+
+@media (max-width: 700px){
+  .contact-qr{align-items:center}
+  .contact-qr img{max-width: 320px}
+}
+
+
+/* Два QR-кода в блоке контактов */
+.contact-qr{align-items:stretch}
+.contact-qr .qr-pair{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+}
+.contact-qr .qr-item{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.contact-qr .qr-item img{
+  width:100%;
+  max-width: 260px;
+}
+@media (max-width: 680px){
+  .contact-qr .qr-item img{max-width: 320px;}
+}
