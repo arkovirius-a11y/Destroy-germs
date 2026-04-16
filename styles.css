@@ -324,7 +324,7 @@ input:focus, textarea:focus{border-color:rgba(157,227,255,.45)}
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:32px;
+  gap:40px;
   flex-wrap:wrap;
   padding:16px 0;
 }
@@ -335,6 +335,9 @@ input:focus, textarea:focus{border-color:rgba(157,227,255,.45)}
   display:block;
   object-fit:contain;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
+}
+
+.support-logo--light{
   border-radius:14px;
   background:#fff;
   padding:10px 14px;
