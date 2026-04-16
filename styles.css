@@ -319,20 +319,31 @@ input:focus, textarea:focus{border-color:rgba(157,227,255,.45)}
   border-bottom: 1px solid var(--line);
   background: rgba(9,12,18,.55);
 }
+
 .support-banner__inner{
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:12px 0;
+  gap:32px;
+  flex-wrap:wrap;
+  padding:16px 0;
 }
-.support-banner img{
-  height: clamp(70px, 6vw, 110px);
+
+.support-logo{
+  height: clamp(72px, 6vw, 110px);
   width:auto;
   display:block;
+  object-fit:contain;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
-  border-radius: 14px;
+  border-radius:14px;
   background:#fff;
   padding:10px 14px;
+}
+
+.support-logo--dark{
+  background:transparent;
+  padding:0;
+  border-radius:0;
 }
 
 /* Фото в блоке контактов */
